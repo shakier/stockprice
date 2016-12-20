@@ -22,7 +22,6 @@ def graph():
   
   app.vars["ticker"] = request.form["ticker"].upper()
   app.vars['type'] = request.form['graph_type']
-  print app.vars
   
   api_url = 'https://www.quandl.com/api/v3/datatables/WIKI/PRICES.json?date.gte=20150101&date.lt=20160101&ticker=%s&api_key=B4hUXhXNio3Rk-kJxoRd' % app.vars['ticker']
   raw_data = requests.get(api_url)
