@@ -1,8 +1,0 @@
-INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger pin code: 630-319-813
-INFO:werkzeug:127.0.0.1 - - [20/Dec/2016 11:12:40] "GET /graph HTTP/1.1" 400 -
-INFO:werkzeug: * Detected change in '/Users/shakier/Documents/dataincubator/flask-demo/app.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Restarting with stat
