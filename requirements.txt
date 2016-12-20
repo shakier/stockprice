@@ -18,7 +18,7 @@ Cerberus==1.0.1
 cffi==1.2.1
 clyent==1.2.0
 colorama==0.3.6
-conda==4.2.13
+conda==4.2.7
 conda-build==1.19.0
 configobj==5.0.6
 cryptography==1.0.2
