@@ -2,26 +2,27 @@
 <title>User Input</title>
 <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
 <div class=page>
-  <h1>User Input</h1>
+  <h1>Stock Price Inquiry</h1>
   <div class=metanav>
 
 <h1>
-Please enter a stock ticker eg. GOOG, and check desired features.
+Please enter a stock ticker eg. GOOG, the time frame of the inquiry, and check desired features.
 </h1>
 
 <form id='input' method='post' action='graph' > <!-- action is the URL you want to move to next-->
-   <p>
-   Ticker symbol: <input type='text' name='ticker' />
-   </p>
-   <p><input type='checkbox' name='graph_type' value="close"/> Closing price</p>
-  <p><input type='checkbox' name='graph_type' value="adj_close"/> Adjusted closing price</p>
-<p><input type='checkbox' name='graph_type' value="open"/> Opening price</p>
-<p><input type='checkbox' name='graph_type' value="adj_open"/> Adjusted opening price</p>
+<p> Ticker symbol: <input type='text' name='ticker' align ="left"   /></p>
+<p><input type='radio' name='graph_type' align ="left"  value="close"/> Closing price</p>
+<p><input type='radio' name='graph_type' align ="left"  value="adj_close"/> Adjusted closing price</p>
+<p><input type='radio' name='graph_type' align ="left"  value="open"/> Opening price</p>
+<p><input type='radio' name='graph_type' align ="left"  value="adj_open"/> Adjusted opening price</p>
+<p>Beginning date:<input type="date" name="begin_date"/></p>
+<p>End date:<input type="date" name = "end_date"/></p>
 
-   <p>
-   <input type='submit' value='Submit' /> <!-- value is the text that will appear on the button. -->
-   </p>
 </form>
 
 </div>
+
+   <p>
+   <input type='submit' align = 'right' value='Submit' /> <!-- value is the text that will appear on the button. -->
+   </p>
 </div>
