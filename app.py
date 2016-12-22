@@ -5,8 +5,6 @@ import requests
 from bokeh.plotting import figure, output_file, show
 from bokeh.embed import components 
 from bokeh.models import ColumnDataSource, Range1d, LabelSet, Label
-from datetime import date
-import time
 
 app = Flask(__name__)
 app.vars = {}
@@ -64,7 +62,7 @@ def graph():
 
 
 if __name__ == '__main__':
-  app.debug = False
+  app.debug = True
   port = int(os.environ.get("PORT", 5000))
   app.run(host='0.0.0.0', port=port)
  # app.run()
