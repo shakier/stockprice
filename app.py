@@ -4,7 +4,7 @@ import numpy as np
 import requests
 from bokeh.plotting import figure, output_file, show
 from bokeh.embed import components 
-from bokeh.models import ColumnDataSource, Range1d, LabelSet, Label
+#from bokeh.models import ColumnDataSource, Range1d, LabelSet, Label
 
 app = Flask(__name__)
 app.vars = {}
@@ -52,17 +52,17 @@ def graph():
   #f.write(str(x_max))
   #f.close()
   x_min = x[y.argmin()]
-  source = ColumnDataSource(data=dict(x = [x_min, x_max], y = [y_min, y_max], numbers = [" ".join(["min:", str(x[y.argmin()])[0:10], str(y_min)]), " ".join(["max:", str(x[y.argmax()])[0:10], str(y_max)])]))
-  labels = LabelSet(x = 'x', y = 'y', text = 'numbers', text_font_size="8pt", text_align = "center", level = 'glyph', source = source, render_mode = 'canvas')
+  #source = ColumnDataSource(data=dict(x = [x_min, x_max], y = [y_min, y_max], numbers = [" ".join(["min:", str(x[y.argmin()])[0:10], str(y_min)]), " ".join(["max:", str(x[y.argmax()])[0:10], str(y_max)])]))
+  #labels = LabelSet(x = 'x', y = 'y', text = 'numbers', text_font_size="8pt", text_align = "center", level = 'glyph', source = source, render_mode = 'canvas')
   plot = figure(title='Data from Quandle WIKI set', x_axis_label='date', x_axis_type='datetime')
   plot.line(x, y)
-  plot.add_layout(labels)
+ # plot.add_layout(labels)
   script, div = components(plot)
   return render_template('graph.html', script = script, div = div)
 
 
 if __name__ == '__main__':
   app.debug = False
-  port = int(os.environ.get("PORT", 5000))
-  app.run(host='0.0.0.0', port=port)
- # app.run()
+  #port = int(os.environ.get("PORT", 5000))
+  #app.run(host='0.0.0.0', port=port)
+  app.run()
